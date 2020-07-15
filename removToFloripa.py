@@ -1,12 +1,13 @@
-""" Esse script remove os 00 na frente do PExxxx para colocar em seguida do codigo do arquivo"""
+""" Esse script remove os 00 na frente do '00PExxxx' para colocar no final do codigo """
 #script Broca_geral
 
 import os
+import time
 
 while(True):
     try:
         arqEntrada = ''.join(os.listdir('roteiro_afina/'))
-        with open(f'roteiro_afina/{arqEntrada}', encoding="utf8", errors='ignore') as f:
+        with open(f'roteiro_afina/{arqEntrada}', encoding="latin-1", errors='ignore') as f:
             read_data = f.readlines()
             print("Arquivo sendo Executado!")
             saida = []
@@ -20,4 +21,6 @@ while(True):
             os.remove(f'roteiro_afina/{arqEntrada}')
             print("Arquivo Finalizado!")
     except:
-        print("Arquivo não Brocado!")
+        print("Arquivo não Encontrado!")
+
+    time.sleep(5)
