@@ -1,4 +1,4 @@
-""" Esse script remove os 00 na frente do '00PExxxx' para colocar no final do codigo """
+""" Esse script remove nas linhas do arquivo os 00 na frente da palavra '00PExxxx' para colocar no final da linha """
 #script Broca_geral
 
 import os
